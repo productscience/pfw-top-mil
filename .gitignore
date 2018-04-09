@@ -1,3 +1,5 @@
 .vscode/settings.json
 
 *.html
+build
+project.egg-info*
