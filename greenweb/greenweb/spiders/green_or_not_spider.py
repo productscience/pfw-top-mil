@@ -8,7 +8,7 @@ class GreenOrNotSpider(scrapy.Spider):
         urls = [
             'http://api.thegreenwebfoundation.org/greencheck/google.com',
             'http://api.thegreenwebfoundation.org/greencheck/youtube.com',
-            'http://api.thegreenwebfoundation.org/greencheck/facebook.facebook'
+            'http://api.thegreenwebfoundation.org/greencheck/facebook.com'
         ]
         for url in urls:
             yield scrapy.Request(url=url, callback=self.parse)
