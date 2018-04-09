@@ -20,5 +20,5 @@ class QuotesSpider(scrapy.Spider):
                 'tags' : quote.css('div.tags a.tag::text').extract()
             }
 
-        for a in response.css('li.next a')
+        for a in response.css('li.next a'):
             yield response.follow(a, callback=self.parse)
