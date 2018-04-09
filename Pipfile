@@ -5,11 +5,12 @@ name = "pypi"
 
 [packages]
 scrapy = "*"
-ipython = "*"
 
 [dev-packages]
 pylint = "*"
 yapf = "*"
+jupyter = "*"
+ipython = "*"
 
 [requires]
 python_version = "3.6"
