@@ -1,10 +1,19 @@
 .vscode/settings.json
 
+.DS_Store
+
 *.html
 build
 project.egg-info*
+
+# don't track pytest bits
+.cache
+.pytest_cache
 
 # Don't track generated files
 
 *.json
 *.jl
+
+# Don't track scrapinghub creds
+scrapinghub.yml
