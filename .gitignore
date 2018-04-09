@@ -3,3 +3,8 @@
 *.html
 build
 project.egg-info*
+
+# Don't track generated files
+
+*.json
+*.jl
