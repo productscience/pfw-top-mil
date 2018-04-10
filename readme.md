@@ -1,28 +1,21 @@
+# PFW-Top-Mil
+
+This is the repo is for a screenscaper I'm working on, to help me work out how much of the web we use runs on renewable power.
+
+Or, more specficially how many of the top million websites as ranked by Alexa run on renewable power.
+
+I'm not sure the best way to to this, but there's an API provied by the GreenWeb foundation that lets you do _some_ of this. I've written a bit more here, with this [jupyter notebook expliaining my thinking in more detail](https://github.com/productscience/planet-friendly-web/blob/hugo/binder/how-much-web-renewable.ipynb).
+
+Anyway, once you get over the abject terror of it all, learning something new in the open is a nice way to get input from the combined knowledge of everyone who knows more than you about a domain.
+
+### Goals of this project
+
+- work out how many of the top million websites as ranked by Alexa run on renewable power
+- to work out a polite, sensible to hit an API a million times in a reasonablty efficient way
+- to learn a bit more about screenscraping
 
 
-## Interesting ideas
+### Installation 
 
-https://docs.scrapy.org/en/latest/topics/architecture.html
-
-### Extension of css selectors
-
-Then add ::text to fetch the text, or ::attr(href) to fetch an attribute on a dom node.
-
-
-```
-In [4]: response.css('li.next a').extract_first()
-Out[4]: '<a href="/page/2/">Next <span aria-hidden="true">→</span></a>'
-
-In [5]: response.css('li.next a::attr(href)').extract_first()
-Out[5]: '/page/2/'
-```
-
-JSON lines - is a format for streaming json - each line is valid json, so you can leave the file open and append new entries
-
-
-### Output handler is the Item Pipeline
-
-You can output with `-o some-output-file.json` or `-o some-output-file.jl`
-
-Or you can use a more involved pipeline processor to write to a DB.
+This project runs on python 3, and uses `pipenv` to manage dependencies. Please see refer to the [pipenv documentation](https://docs.pipenv.org/) for installation and running the project - if you haven't used it yet, I _really_ recommend it.
 

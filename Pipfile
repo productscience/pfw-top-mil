@@ -6,9 +6,9 @@ name = "pypi"
 [packages]
 scrapy = "*"
 shub = "*"
-pytest = "*"
 
 [dev-packages]
+pytest = "*"
 pylint = "*"
 yapf = "*"
 jupyter = "*"
