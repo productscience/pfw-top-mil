@@ -1,6 +1,20 @@
 import os
 import pytest
-from domain_generator import gen_urls, cut_down_list, fetch_top_mil, decompress_top_mil
+
+import sys
+
+from pathlib import Path
+cur_path = Path.cwd()
+
+sys.path.append(cur_path)
+
+[print(p) for p in sys.path]
+
+from greenweb.domain_generator import (
+    gen_urls, fetch_top_mil, cut_down_list, decompress_top_mil
+)
+import pdb; pdb.set_trace()
+
 
 def test_we_return_domains_with_no_trailing_chars():
     with open('top-50.csv') as csvfile:
@@ -36,7 +50,7 @@ def test_we_can_fetch_top_mil():
 
 @pytest.mark.slowtest
 def test_decompress_top_mil():
-        
+
     fetch_top_mil()
     assert os.path.exists('top-1m.csv.zip') == True
 

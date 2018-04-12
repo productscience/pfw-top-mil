@@ -13,6 +13,7 @@ pylint = "*"
 yapf = "*"
 jupyter = "*"
 ipython = "*"
+ipdb = "*"
 
 [requires]
 python_version = "3.6"
