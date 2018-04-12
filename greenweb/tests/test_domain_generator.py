@@ -1,20 +1,13 @@
-import os
-import pytest
-
 import sys
-
+import pytest
 from pathlib import Path
+
 cur_path = Path.cwd()
-
-sys.path.append(cur_path)
-
-[print(p) for p in sys.path]
+sys.path.append(str(cur_path))
 
 from greenweb.domain_generator import (
     gen_urls, fetch_top_mil, cut_down_list, decompress_top_mil
 )
-import pdb; pdb.set_trace()
-
 
 def test_we_return_domains_with_no_trailing_chars():
     with open('top-50.csv') as csvfile:
@@ -40,20 +33,27 @@ def test_we_make_subections_of_file():
 
 @pytest.mark.slowtest
 def test_we_can_fetch_top_mil():
+    zip_string = 'top-1m.csv.zip'
 
-    assert os.path.exists('top-1m.csv.zip') == False
+    # setup
+    if Path(zip_string).exists():
+        # unlink is functionally the same as delete
+        Path(zip_string).unlink()
 
     res = fetch_top_mil()
 
-    assert res == 'top-1m.csv.zip'
-    assert os.path.exists('top-1m.csv.zip') == True
+    assert res == zip_string
+    assert Path(zip_string).exists()
+
 
 @pytest.mark.slowtest
 def test_decompress_top_mil():
+    zip_string = 'top-1m.csv.zip'
 
     fetch_top_mil()
-    assert os.path.exists('top-1m.csv.zip') == True
+
+    assert Path(zip_string).exists()
 
     decompress_top_mil('top-1m.csv.zip')
 
-    assert os.path.exists('top-1m.csv') == True
+    assert Path('top-1m.csv').exists()
