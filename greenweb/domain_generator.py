@@ -18,3 +18,19 @@ def gen_urls(file_object):
 
         yield "http://api.thegreenwebfoundation.org/greencheck/{}".format(
             trimmed_domain)
+
+def cut_down_list(no_of_urls, file_path):
+    """
+    Fetch the top N urls from the list of urls, and write it to a new file, for iterating through
+    """
+    with open(file_path) as file:
+
+        subection_filepath = "top-{}-subsection.csv".format(no_of_urls)
+        with open(subection_filepath, 'w+') as subsection_file:
+            
+                for idx, line in enumerate(file):
+                    if idx < no_of_urls:
+                        subsection_file.write(line)
+
+
+    return subection_filepath
