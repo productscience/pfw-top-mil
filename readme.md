@@ -4,7 +4,7 @@ This is the repo is for a screenscaper I'm working on, to help me work out how m
 
 Or, more specficially how many of the top million websites as ranked by Alexa run on renewable power.
 
-I'm not sure the best way to to this, but there's an API provied by the GreenWeb foundation that lets you do _some_ of this. I've written a bit more here, with this [jupyter notebook expliaining my thinking in more detail](https://github.com/productscience/planet-friendly-web/blob/hugo/binder/how-much-web-renewable.ipynb).
+I'm not sure the best way to to this, but there's an API provied by the GreenWeb foundation that lets you do _some_ of this. I've written a bit more here, with this [jupyter notebook explaining my thinking in more detail](https://github.com/productscience/planet-friendly-web/blob/hugo/binder/how-much-web-renewable.ipynb).
 
 Anyway, once you get over the abject terror of it all, learning something new in the open is a nice way to get input from the combined knowledge of everyone who knows more than you about a domain.
 
