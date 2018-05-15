@@ -17,3 +17,7 @@ project.egg-info*
 
 # Don't track scrapinghub creds
 scrapinghub.yml
+
+
+# Don't track dat
+.dat
