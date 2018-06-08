@@ -11,7 +11,7 @@ Anyway, once you get over the abject terror of it all, learning something new in
 ### Goals of this project
 
 - work out how many of the top million websites as ranked by Alexa run on renewable power
-- to work out a polite, sensible to hit an API a million times in a reasonablty efficient way
+- to work out a polite, sensible way to hit an API a million times in a reasonably efficient way
 - to learn a bit more about screenscraping
 
 
